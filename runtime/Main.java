@@ -1,3 +1,10 @@
+/*
+ * Developer: River Seeber (https://github.com/rseeber)
+ * Date: December 02, 2024
+ * Project: CS 131 Final Exam
+ * Version: 1.0.0
+ */
+
 package runtime;
 
 import clock.*;
@@ -19,6 +26,7 @@ public class Main {
         //     (years * number_of_seconds_per_year) + (days * number_of_seconds_per_day)
         num = (int)(years * 12 * 30 * 24 * 60 * 60) + (int)(24 * 60 * 60 * days);
 
+        //tick each clock by the user inputted value, then print the readout
         Clock c = new SundialClock();
         c.tick(num);
         c.printReadout();

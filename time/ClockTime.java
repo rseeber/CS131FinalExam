@@ -1,5 +1,6 @@
 /*
- * This class is excluded from the inheritence structure. It's part of a Has-A structure.
+ * This class handles all of the "raw seconds" fucntionality of counting
+ * up on the clock. Converting into date format is handled by the DateTime class.
  */
 package time;
 
@@ -12,7 +13,8 @@ public class ClockTime {
         this.seconds_ = seconds_;
         ms_ = 0.00d;
     }
-
+    
+    //starts the clock over back at zero
     public void reset(){
         seconds_ = 0;
         ms_ = 0.00d;

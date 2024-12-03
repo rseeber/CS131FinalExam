@@ -1,3 +1,15 @@
+/*
+ * This class is used to convert a seconds total count into a
+ * human readable time delta in terms of years, months, days,
+ * hours, minutes, and seconds.
+ * 
+ * Note: in the Clock class implimentation, we use this time delta to
+ * calculate a time by using UNIX Epoch as a starting point, but
+ * this functionality isn't baked into the DateTime class. All this
+ * does is calculate a delta, it's up to the implimentation as to
+ * what starting point you use, if any.
+ */
+
 package time;
 
 public class DateTime {
@@ -16,6 +28,7 @@ public class DateTime {
         return dt;
     }
 
+    //calculates delta time in human readable terms based on the secondsTotal
     public void doTime(){
         //pre-assign seconds, without messing with secondsTotal
         seconds = secondsTotal;
